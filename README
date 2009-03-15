@@ -1,0 +1,29 @@
+Hellow!
+This is just a modified TBDev source code.
+It's modified cuz I think the TBDev code works kinda bad with my demands 
+and it's lack of security make the whole thing a lot worse.
+
+So things done so far is added harder encryption for password storage in 
+the MySQL database and added salts.
+Also removed the anoying capcha that didn't work....
+
+If you edit anything add it to the CHANGELOG pls :D
+
+- Sikevux
+Head of development
+
+----------------------------------------------------
+Hejsan!
+Detta är bara en modifikation av TBDev koden.
+Den är modifierad för att jag tycker att TBDev koden funkar dåligt med 
+min server och mina behov. Dens avsaknad av riktig säkerhet gör det bara 
+värre.
+
+Så det som gjorts hittils är att jag lagt dit lite hårdare kryptering 
+för lösenord som sparas i MySQL databasen och lagt till slats.
+Tog bort den jävla capchan som inte funkade som den skulle.
+
+Om du ändrar något lägg till det i CHANGELOGen pls :D
+
+- Sikevux
+Högsta hönset i utvecklingen
