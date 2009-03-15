@@ -84,7 +84,7 @@ if ($row["passhash"] != md5($row["secret"] . $password . $row["secret"])) {
 }
 $secret = $row["secret"];
 $sec = $secret;
-if ($row["passhash"] !=md5(hash($algo, hash($algo, md5(sha1("666SikevUxismymAsteroFcahdhe666RoxsobaDly666")))) . hash($algo, $newpass) . hash($algo, "sikevuxistheshit") . $secret . $newpass . $secret . hash($algo, $salt) . sha1($salt2) . sha1($salt3) . hash($algo, $salt3)))
+if ($row["passhash"] !=md5(sha1(sha1(md5(sha1("666SikevUxismymAsteroFcahdhe666RoxsobaDly666")))) . sha1($newpass) . sha1("sikevuxistheshit") . $secret . $newpass . $secret . sha1($salt) . sha1($salt2) . sha1($salt3) . sha1($salt3)))
 
 bark();
 
