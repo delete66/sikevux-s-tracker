@@ -282,8 +282,8 @@ if (get_user_class() >= UC_MODERATOR) { ?>
       <? if ($CURUSER) { ?>
       <?php
 $datum = getdate();
-$datum[hours] = sprintf("%02.0f", $datum[hours]);
-$datum[minutes] = sprintf("%02.0f", $datum[minutes]);
+//$datum[hours] = sprintf("%02.0f", $datum[hours]);
+//$datum[minutes] = sprintf("%02.0f", $datum[minutes]);
 $invites = $CURUSER['invites'];
 $uped = mksize($CURUSER['uploaded']);
 $downed = mksize($CURUSER['downloaded']);

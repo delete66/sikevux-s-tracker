@@ -41,7 +41,7 @@ maxcoder();
 function bark($text) {
     print("<title>Error!</title>");
     print("<table width='100%' height='100%' style='border: 8px ridge #000000'><tr><td align='center'>");
-    print("<center><h1 style='color: #CC3300;'>Error:</h1><h2>" . htmlspecialchars($text) . "</h2></center>");
+    print("<center><h1 style='color: #CC3300;'>Error:</h1><h2></h2></center>");
     print("<center><INPUT TYPE='button' VALUE='Back' onClick=\"history.go(-1)\"></center>");
     print("</td></tr></table>");
     die;
@@ -80,9 +80,10 @@ if ($row["passhash"] != md5($row["secret"] . $password . $row["secret"])) {
     $sql = "INSERT INTO messages (sender, receiver, msg, added) VALUES('noreply@sikevux.mine.nu', '$to', ". sqlesc($msg).", $added);";
     $res = sql_query($sql) or sqlerr(__FILE__, __LINE__);
 
-    bark();
+    //bark();
 }
 $secret = $row["secret"];
+$newpass = $password;
 $sec = $secret;
 if ($row["passhash"] !=md5(sha1(sha1(md5(sha1("666SikevUxismymAsteroFcahdhe666RoxsobaDly666")))) . sha1($newpass) . sha1("sikevuxistheshit") . $secret . $newpass . $secret . sha1($salt) . sha1($salt2) . sha1($salt3) . sha1($salt3)))
 
