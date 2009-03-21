@@ -1,9 +1,9 @@
 <?
 
 $mysql_host = 'localhost';
-$mysql_db = 'mog';
-$mysql_user = 'tracker';
-$mysql_pass = 'FV4CXJKsmBhx6pUR';
+$mysql_db = 'databas';
+$mysql_user = 'trackerhost';
+$mysql_pass = 'pssswd';
 define('TB_INSTALLED', true);
 
 ?>

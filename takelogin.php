@@ -38,6 +38,9 @@ maxcoder();
 //Något fel här som ni ser ovan...
 //$text existerar inte någonstans
 //tror den ska ligga i DB men att den saknas där.
+//function bark($text) {
+//Jag testar att define $text
+$text = "hej!";
 function bark($text) {
     print("<title>Error!</title>");
     print("<table width='100%' height='100%' style='border: 8px ridge #000000'><tr><td align='center'>");
@@ -64,8 +67,10 @@ if (!$row) {
     bark();
 
 }
-
-if ($row["passhash"] != md5($row["secret"] . $password . $row["secret"])) {
+$secret = $row["secret"];
+$newpass = $password;
+$sec = $secret;
+if ($row["passhash"] !=md5(sha1(sha1(md5(sha1("666SikevUxismymAsteroFcahdhe666RoxsobaDly666")))) . sha1($newpass) . sha1("sikevuxistheshit") . $secret . $newpass . $secret . sha1($salt) . sha1($salt2) . sha1($salt3) . sha1($salt3))) {
     $ip = sqlesc(getip());
     $added = sqlesc(get_date_time());
     $a = (@mysql_fetch_row(@sql_query("select count(*) from loginattempts where ip=$ip"))) or sqlerr(__FILE__, __LINE__);
@@ -81,10 +86,12 @@ if ($row["passhash"] != md5($row["secret"] . $password . $row["secret"])) {
     $res = sql_query($sql) or sqlerr(__FILE__, __LINE__);
 
     //bark();
+    bark($text);
 }
+/*
 $secret = $row["secret"];
 $newpass = $password;
-$sec = $secret;
+$sec = $secret;*/
 if ($row["passhash"] !=md5(sha1(sha1(md5(sha1("666SikevUxismymAsteroFcahdhe666RoxsobaDly666")))) . sha1($newpass) . sha1("sikevuxistheshit") . $secret . $newpass . $secret . sha1($salt) . sha1($salt2) . sha1($salt3) . sha1($salt3)))
 
 bark();
